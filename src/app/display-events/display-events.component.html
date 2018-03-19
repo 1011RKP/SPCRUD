@@ -1,0 +1,39 @@
+<table class="table table-bordered table-striped">
+  <thead style="background: #1c2a48!important;color: white!important;">
+    <tr>
+      <th>First Name</th>
+      <th>Title</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <colgroup>
+    <col class="col-md-3">
+    <col class="col-md-3">
+    <col class="col-md-2">
+    <col class="col-md-2">
+    <col class="col-md-2">
+  </colgroup>
+  <tbody>
+    <tr *ngFor="let event of response">
+      <td>
+        <p>{{event?.First_x0020_Name}}</p>
+      </td>
+      <td>
+        <p>{{event?.Title}}</p>
+      </td>
+      <td>
+        <p>{{event?.Email}}</p>
+      </td>
+      <td>
+        <p>{{event?.Phone_x0020_Number}}</p>
+      </td>
+      <td>
+        <a [routerLink] ="['/editItem', event.Id]">
+          <i style="color: #1c2a48!important;"  class="fas fa-edit"></i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

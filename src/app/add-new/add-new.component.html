@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-8">
+        <form #addItemForm="ngForm">
+            <div class="row">
+                <h4 class="header">Add New Item</h4>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="form-group ">
+                        <label class="control-label">
+                            First Name
+                        </label>
+                        <input class="form-control" type="text" [(ngModel)]='firstName' name="firstName" />
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label">
+                            Title
+                        </label>
+                        <input class="form-control" type="text" [(ngModel)]='title' name="title" />
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label">
+                            Email
+                        </label>
+                        <input class="form-control" type="text" [(ngModel)]='email' name="email" />
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label">
+                            Phone Number
+                        </label>
+                        <input class="form-control" type="text" [(ngModel)]='phNumber' name="phNumber" />
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="allignButtons">
+                            <button style="text-align: center" class="btn btn-primary" type="button" (click)="addnewItem()">
+                                <i class="fas fa-plus-circle"> Add New Item</i>
+                            </button>
+                            <button style="text-align: center" class="btn btn-warning" type="button" (click)="cancle()">
+                                <i class="fa fa-ban" aria-hidden="true"> Cancle</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
